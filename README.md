@@ -282,5 +282,82 @@ Muestra todos los cambios realizados en el repositorio.
 Muestra todos los commits realizados.
 
 ```code
-
+nada para hacer commit, el árbol de trabajo está limpio
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git checkout develop
+warning: refname 'develop' is ambiguous.
+error: Los cambios locales de los siguientes archivos serán sobrescritos por checkout:
+	README.md
+Por favor realice un commit con los cambios o un stash antes de cambiar ramas.
+Abortando
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git add .
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git commit -m "Actualización del README."
+[feature-2 5735f7d] Actualización del README.
+ 1 file changed, 60 insertions(+)
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git checkout develop
+warning: refname 'develop' is ambiguous.
+Cambiado a rama 'develop'
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git merge feature-2
+Actualizando 5d0aa92..5735f7d
+Fast-forward
+ Adios.html                       |  15 ++
+ Estamos_a_punto_de_terminar.html |  11 ++
+ README.md                        | 286 ++++++++++++++++++++++++++++++++++++
+ hola.html                        |  12 ++
+ 4 files changed, 324 insertions(+)
+ create mode 100644 Adios.html
+ create mode 100644 Estamos_a_punto_de_terminar.html
+ create mode 100644 hola.html
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git add .
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git commit -m "Fusionada la rama feature-2 con develop."
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git checkout main
+Cambiado a rama 'main'
+Tu rama está actualizada con 'origin/main'.
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git merge develop
+warning: refname 'develop' is ambiguous.
+Ya está actualizado.
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git checkout develop
+warning: refname 'develop' is ambiguous.
+Cambiado a rama 'develop'
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git checkout main
+Cambiado a rama 'main'
+Tu rama está actualizada con 'origin/main'.
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git add .
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git commit -m "Actualización del README."
+[main e4d8348] Actualización del README.
+ 1 file changed, 84 insertions(+)
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git merge develop
+warning: refname 'develop' is ambiguous.
+Ya está actualizado.
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git checkout main
+M	README.md
+Ya en 'main'
+Tu rama está adelantada a 'origin/main' por 1 commit.
+  (usa "git push" para publicar tus commits locales)
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git push origin main
+Username for 'https://github.com': nalleon
+Password for 'https://nalleon@github.com': 
+Enumerando objetos: 5, listo.
+Contando objetos: 100% (5/5), listo.
+Compresión delta usando hasta 4 hilos
+Comprimiendo objetos: 100% (3/3), listo.
+Escribiendo objetos: 100% (3/3), 884 bytes | 884.00 KiB/s, listo.
+Total 3 (delta 1), reusados 0 (delta 0), pack-reusados 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/nalleon/ejercicio_git_nabil_leon_alvarez
+   11b25c5..e4d8348  main -> main
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git checkout main
+M	README.md
+Ya en 'main'
+Tu rama está actualizada con 'origin/main'.
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git merge develop
+warning: refname 'develop' is ambiguous.
+Ya está actualizado.
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ ls -la
+total 32
+drwxrwxr-x  3 dam dam  4096 oct 18 15:25 .
+drwxr-x--- 38 dam dam  4096 oct 18 15:10 ..
+-rw-rw-r--  1 dam dam   278 oct 18 15:21 Adios.html
+drwxrwxr-x  8 dam dam  4096 oct 18 15:27 .git
+-rw-rw-r--  1 dam dam   266 oct 18 15:21 hola.html
+-rw-rw-r--  1 dam dam 10278 oct 18 15:26 README.md
 ```
