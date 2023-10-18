@@ -197,6 +197,90 @@ Crea la feature-2 y muevete a esta.
 
 Crea el archivo Estamos_a_punto_de_terminar.html, con el siguiente contenido:
 
+Realiza el commit y sube los cambios.
+
+```
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Terminando </title>
+</head>
+<body>
+<h1 align="center" >Apunto de terminar </h1>
+<hr>
+<p> Esto se esta acabando nombre_alumno </p>
+</body>
+</html>
+```
+
+Salida:
+
+```code
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git log
+commit 11b25c569e968048396b8ac137b448a669c6050b (HEAD -> main)
+Author: nalleon <nabil14716@gmail.com>
+Date:   Wed Oct 18 15:08:08 2023 +0100
+
+    Actualización del README.
+
+commit 8c893006b2a0b7492bd13c5ab1f9a3c4dad51ce8 (origin/main)
+Author: nalleon <nabil14716@gmail.com>
+Date:   Wed Oct 18 15:01:12 2023 +0100
+
+    Actualización del README.
+
+commit 6c81de67710240d1e49ee0a1e5adbf648bc10fb2
+Author: nalleon <nabil14716@gmail.com>
+Date:   Wed Oct 18 14:57:12 2023 +0100
+
+    Añadido Adios.html en la rama main.
+
+commit 5d0aa92f2536915a64c16bb3a8d8337d24615a6c (develop)
+Author: nalleon <nabil14716@gmail.com>
+Date:   Wed Oct 18 14:50:47 2023 +0100
+
+    Se ha añadido el README.md
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git branch feature-2
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git checkout feature-2
+M	README.md
+Cambiado a rama 'feature-2'
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ cat > Estamos_a_punto_de_terminar.html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Terminando </title>
+</head>
+<body>
+<h1 align="center" >Apunto de terminar </h1>
+<hr>
+<p> Esto se esta acabando Nabil León Álvarez </p>
+</body>
+</hmtl>
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git add .
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git commit -m "Se ha creado el archivo E"
+[feature-2 569c622] Se ha creado el archivo E
+ 2 files changed, 35 insertions(+)
+ create mode 100644 Estamos_a_punto_de_terminar.html
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git commit -m "Se ha creado el archivo  Estamos_a_punto_de_terminar.html"
+En la rama feature-2
+nada para hacer commit, el árbol de trabajo está limpio
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ 
+```
+
+# 4
+
+Muevete a la rama develop, y realiza la mezcla con la rama feature-2.
+
+Sube los cambios de la rama develop a Github.
+
+Cambia a la rama principal, realiza la mezcla con la rama develop.
+
+Realiza el tag con el nombre v.2. y sube los cambios.
+
+Muestra todos los cambios realizados en el repositorio.
+
+Muestra todos los commits realizados.
+
 ```code
 
 ```
