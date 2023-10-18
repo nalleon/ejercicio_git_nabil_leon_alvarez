@@ -5,7 +5,7 @@ Realiza la clonación del frepositorio creado.
 
 Añadir el archivo README al repositorio y realizar el primer commit.
 
-Salida:
+- Salida:
 ```code 
 dam@a108pc11:~$ git clone https://github.com/nalleon/ejercicio_git_nabil_leon_alvarez
 Clonando en 'ejercicio_git_nabil_leon_alvarez'...
@@ -57,6 +57,9 @@ Moverse a la rama principal y crear el fichero adios.html > Sustituye nombre_alu
 ```
 Crea el commit con un mensaje descriptivo.
 Sube los cambios a la rama actual.
+
+
+- Salida:
 
 ```code
 am@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git branch develop
@@ -114,7 +117,7 @@ dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ cat > Adios.html
 <p> Adios soy el alumno Nabil León Álvarez </p>
 </body>
 <hmtl>
-```
+
 dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git add .
 dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git commit "Añadido Adios.html en la rama main."
 error: ruta especificada 'Añadido Adios.html en la rama main.' no concordó con ningún archivo conocido por git
@@ -126,6 +129,8 @@ dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git commit -m "Añadido Adios.h
 dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ 
 ```
 ```
+```
+
 # 3
 Sube los cambios a la rama actual.
 
@@ -136,6 +141,8 @@ Realizar la mezcla en el repositorio principal.
 Sube los cambios al repositorio a tu cuenta de Github.
 
 Muestra todos los cambios realizados.
+
+- Salida:
 
 ```code
 dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git merge develop
@@ -213,8 +220,7 @@ Realiza el commit y sube los cambios.
 </html>
 ```
 
-Salida:
-
+- Salida:
 ```code
 dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git log
 commit 11b25c569e968048396b8ac137b448a669c6050b (HEAD -> main)
@@ -267,7 +273,7 @@ nada para hacer commit, el árbol de trabajo está limpio
 dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ 
 ```
 
-# 4
+# 5
 
 Muevete a la rama develop, y realiza la mezcla con la rama feature-2.
 
@@ -281,6 +287,7 @@ Muestra todos los cambios realizados en el repositorio.
 
 Muestra todos los commits realizados.
 
+- Salida:
 ```code
 nada para hacer commit, el árbol de trabajo está limpio
 dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git checkout develop
@@ -360,4 +367,208 @@ drwxr-x--- 38 dam dam  4096 oct 18 15:10 ..
 drwxrwxr-x  8 dam dam  4096 oct 18 15:27 .git
 -rw-rw-r--  1 dam dam   266 oct 18 15:21 hola.html
 -rw-rw-r--  1 dam dam 10278 oct 18 15:26 README.md
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git tag v.1
+fatal: el tag 'v.1' ya existe
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git show
+commit e4d8348688f844cfc8c7f434fcd1664261585233 (HEAD -> main, origin/main)
+Author: nalleon <nabil14716@gmail.com>
+Date:   Wed Oct 18 15:25:30 2023 +0100
+
+    Actualización del README.
+
+diff --git a/README.md b/README.md
+index d9b9778..1d5812b 100644
+--- a/README.md
++++ b/README.md
+@@ -197,6 +197,90 @@ Crea la feature-2 y muevete a esta.
+ 
+ Crea el archivo Estamos_a_punto_de_terminar.html, con el siguiente contenido:
+ 
++Realiza el commit y sube los cambios.
++
++```
++<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
++<html>
++<head>
++<title>Terminando </title>
++</head>
++<body>
++<h1 align="center" >Apunto de terminar </h1>
++<hr>
++<p> Esto se esta acabando nombre_alumno </p>
++</body>
++</html>
++```
++
++Salida:
++
++```code
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git log
++commit 11b25c569e968048396b8ac137b448a669c6050b (HEAD -> main)
++Author: nalleon <nabil14716@gmail.com>
++Date:   Wed Oct 18 15:08:08 2023 +0100
++
++    Actualización del README.
++
++commit 8c893006b2a0b7492bd13c5ab1f9a3c4dad51ce8 (origin/main)
++Author: nalleon <nabil14716@gmail.com>
++Date:   Wed Oct 18 15:01:12 2023 +0100
++
++    Actualización del README.
++
++commit 6c81de67710240d1e49ee0a1e5adbf648bc10fb2
++Author: nalleon <nabil14716@gmail.com>
++Date:   Wed Oct 18 14:57:12 2023 +0100
++
++    Añadido Adios.html en la rama main.
++
++commit 5d0aa92f2536915a64c16bb3a8d8337d24615a6c (develop)
++Author: nalleon <nabil14716@gmail.com>
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git tag v.2.
+fatal: 'v.2.' no es un nombre de tag válido.
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git tag v.2
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git show
+commit e4d8348688f844cfc8c7f434fcd1664261585233 (HEAD -> main, tag: v.2, origin/main)
+Author: nalleon <nabil14716@gmail.com>
+Date:   Wed Oct 18 15:25:30 2023 +0100
+
+    Actualización del README.
+
+diff --git a/README.md b/README.md
+index d9b9778..1d5812b 100644
+--- a/README.md
++++ b/README.md
+@@ -197,6 +197,90 @@ Crea la feature-2 y muevete a esta.
+ 
+ Crea el archivo Estamos_a_punto_de_terminar.html, con el siguiente contenido:
+ 
++Realiza el commit y sube los cambios.
++
++```
++<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
++<html>
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git add .
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git commit -m "Creación de ttag v.2"
+[main 8deab51] Creación de ttag v.2
+ 1 file changed, 79 insertions(+), 2 deletions(-)
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git show 
+commit 8deab51dde0838dee0e593028955e3561ac73288 (HEAD -> main)
+Author: nalleon <nabil14716@gmail.com>
+Date:   Wed Oct 18 15:33:09 2023 +0100
+
+    Creación de ttag v.2
+
+diff --git a/README.md b/README.md
+index 1d5812b..cb51930 100644
+--- a/README.md
++++ b/README.md
+@@ -282,5 +282,82 @@ Muestra todos los cambios realizados en el repositorio.
+ Muestra todos los commits realizados.
+ 
+ ```code
+-
+-```
+\ No newline at end of file
++nada para hacer commit, el árbol de trabajo está limpio
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git checkout develop
++warning: refname 'develop' is ambiguous.
++error: Los cambios locales de los siguientes archivos serán sobrescritos por checkout:
++       README.md
++Por favor realice un commit con los cambios o un stash antes de cambiar ramas.
++Abortando
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git add .
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git commit -m "Actualización del README."
++[feature-2 5735f7d] Actualización del README.
++ 1 file changed, 60 insertions(+)
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git checkout develop
++warning: refname 'develop' is ambiguous.
++Cambiado a rama 'develop'
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git merge feature-2
++Actualizando 5d0aa92..5735f7d
++Fast-forward
++ Adios.html                       |  15 ++
++ Estamos_a_punto_de_terminar.html |  11 ++
++ README.md                        | 286 ++++++++++++++++++++++++++++++++++++
++ hola.html                        |  12 ++
++ 4 files changed, 324 insertions(+)
++ create mode 100644 Adios.html
++ create mode 100644 Estamos_a_punto_de_terminar.html
++ create mode 100644 hola.html
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git add .
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git commit -m "Fusionada la rama feature-2 con develop."
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git checkout main
++Cambiado a rama 'main'
++Tu rama está actualizada con 'origin/main'.
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git merge develop
++warning: refname 'develop' is ambiguous.
++Ya está actualizado.
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git checkout develop
++warning: refname 'develop' is ambiguous.
++Cambiado a rama 'develop'
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git checkout main
++Cambiado a rama 'main'
++Tu rama está actualizada con 'origin/main'.
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git add .
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git commit -m "Actualización del README."
++[main e4d8348] Actualización del README.
++ 1 file changed, 84 insertions(+)
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git merge develop
++warning: refname 'develop' is ambiguous.
++Ya está actualizado.
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git checkout main
++M      README.md
++Ya en 'main'
++Tu rama está adelantada a 'origin/main' por 1 commit.
++  (usa "git push" para publicar tus commits locales)
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git push origin main
++Username for 'https://github.com': nalleon
++Password for 'https://nalleon@github.com': 
++Enumerando objetos: 5, listo.
++Contando objetos: 100% (5/5), listo.
++Compresión delta usando hasta 4 hilos
++Comprimiendo objetos: 100% (3/3), listo.
++Escribiendo objetos: 100% (3/3), 884 bytes | 884.00 KiB/s, listo.
++Total 3 (delta 1), reusados 0 (delta 0), pack-reusados 0
++remote: Resolving deltas: 100% (1/1), completed with 1 local object.
++To https://github.com/nalleon/ejercicio_git_nabil_leon_alvarez
++   11b25c5..e4d8348  main -> main
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git checkout main
++M      README.md
++Ya en 'main'
++Tu rama está actualizada con 'origin/main'.
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git merge develop
++warning: refname 'develop' is ambiguous.
++Ya está actualizado.
++dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ ls -la
++total 32
++drwxrwxr-x  3 dam dam  4096 oct 18 15:25 .
++drwxr-x--- 38 dam dam  4096 oct 18 15:10 ..
++-rw-rw-r--  1 dam dam   278 oct 18 15:21 Adios.html
++drwxrwxr-x  8 dam dam  4096 oct 18 15:27 .git
++-rw-rw-r--  1 dam dam   266 oct 18 15:21 hola.html
++-rw-rw-r--  1 dam dam 10278 oct 18 15:26 README.md
++```
+dam@a108pc11:~/ejercicio_git_nabil_leon_alvarez$ git log
+commit 8deab51dde0838dee0e593028955e3561ac73288 (HEAD -> main)
+Author: nalleon <nabil14716@gmail.com>
+Date:   Wed Oct 18 15:33:09 2023 +0100
+
+    Creación de ttag v.2
+
+commit e4d8348688f844cfc8c7f434fcd1664261585233 (tag: v.2, origin/main)
+Author: nalleon <nabil14716@gmail.com>
+Date:   Wed Oct 18 15:25:30 2023 +0100
+
+    Actualización del README.
+
+commit 11b25c569e968048396b8ac137b448a669c6050b (tag: v.1, tag: develop)
+Author: nalleon <nabil14716@gmail.com>
+Date:   Wed Oct 18 15:08:08 2023 +0100
+
+    Actualización del README.
+
+commit 8c893006b2a0b7492bd13c5ab1f9a3c4dad51ce8
+Author: nalleon <nabil14716@gmail.com>
+Date:   Wed Oct 18 15:01:12 2023 +0100
+:
 ```
